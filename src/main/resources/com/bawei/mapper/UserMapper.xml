@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper   
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 
+	namespace:工作空间的名称   名称随意
+ -->
+<mapper namespace="com.bawei.mapper.UserDao">
+	 
+	<select id="getUserList" resultType="com.bawei.bean.User">
+		select * from user
+	</select>
+
+	<select id="login" resultType="com.bawei.bean.User" parameterType="com.bawei.bean.User">
+		select * from user where uname=#{uname} and pwd=#{pwd}
+	</select>
+	
+	<select id="checkuname" parameterType="string" resultType="com.bawei.bean.User">
+		select * from user where uname=#{_parameter}
+	</select>
+</mapper>
