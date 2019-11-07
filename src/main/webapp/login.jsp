@@ -14,13 +14,30 @@
 </head>
 <body>
 	<form action="">
-		用户名:<input type="text" name="uname"><br><br>
+		用户名:<input type="text" name="uname" onblur="look()"><br><br>
 		密&nbsp;&nbsp;&nbsp;码:<input type="password" name="pwd"><br><br>
 		<input type="button" value="登录" onclick="login()">
 		<input type="button" value="注册" onclick="register()">
 	</form>
 </body>
 <script type="text/javascript">
+	
+	function look(){
+		var uname=$("[name='uname']").val();
+		$.post(
+			"<%=path%>/look",
+			{"uname":uname},
+			function(u){
+				
+				if(u!=null){
+					str="<img alt='xxx' width='100px;' height='50px;'><br><br>"
+					$("form").before(str);
+					$("[alt='xxx']").attr("src","<%=path%>/lockPicture?path="+u.picture);
+				}
+			},
+			"json"
+		);
+	}
 	
 	function register(){
 		location="<%=path%>/register.jsp";

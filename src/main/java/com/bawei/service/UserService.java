@@ -17,5 +17,7 @@ public interface UserService {
 
 	User checkuname(String uname);
 
+	Integer register(User user);
+
 
 }

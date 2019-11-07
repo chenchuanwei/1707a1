@@ -18,4 +18,9 @@
 	<select id="checkuname" parameterType="string" resultType="com.bawei.bean.User">
 		select * from user where uname=#{_parameter}
 	</select>
+	
+	<insert id="register" parameterType="com.bawei.bean.User">
+		insert into user (uname,pwd,nickname,birthday,gender,locked,created,picture)
+		values (#{uname},#{pwd},#{nickname},#{birthday},#{gender},#{locked},#{created},#{picture})
+	</insert>
 </mapper>

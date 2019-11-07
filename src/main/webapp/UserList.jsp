@@ -51,7 +51,7 @@
 			</td>
 			<td>${u.created}</td>
 			<td>${u.updated}</td>
-			<td>${u.picture}</td>
+			<td><img alt="xxx" width="100px;" height="50px;" src="<%=path%>/lockPicture?path=${u.picture}"></td>
 		</tr>
 	</c:forEach>
 	</table>

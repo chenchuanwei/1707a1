@@ -38,6 +38,11 @@ public class UserServiceImpl implements UserService {
 		return ud.checkuname(uname);
 	}
 
+	public Integer register(User user) {
+		// TODO Auto-generated method stub
+		return ud.register(user);
+	}
+
 	
 	
 }

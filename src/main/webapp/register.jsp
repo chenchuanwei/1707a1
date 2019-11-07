@@ -13,9 +13,9 @@
 <script type="text/javascript" src="<%=path%>/js/jquery-1.8.3.js"></script>
 </head>
 <body>
-	<form action="">
+	<form action="<%=path%>/register" method="post" enctype="multipart/form-data">
 		用户名:<input type="text" name="uname" onblur="checkuname()"><br><br>
-		昵称:<input type="text" name="nickname"><br><br>
+		昵&nbsp;&nbsp;&nbsp;称:<input type="text" name="nickname"><br><br>
 		密&nbsp;&nbsp;&nbsp;码:<input type="password" name="pwd"><br><br>
 		确认密码:<input type="password" name="pwd1" onblur="checkpwd()"><br><br>
 		性别:<input type="radio" name="gender" value="1">男
@@ -23,8 +23,9 @@
 		生日:<input type="date" name="birthday"><br><br>
 		是否禁止:<input type="radio" name="locked" value="1">否
 		<input type="radio" name="locked" value="0">是<br><br>
-		<input type="button" value="注册" onclick="register()">
-		<input type="button" value="已注册,登录" onclick="login()">	
+		头像:<input type="file" name="photo">	<br><br>
+		<input type="submit" value="注册" onclick="register()">
+		<input type="button" value="已注册,登录" onclick="login()">
 	</form>
 </body>
 <script type="text/javascript">

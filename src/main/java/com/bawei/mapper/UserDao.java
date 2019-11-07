@@ -17,4 +17,6 @@ public interface UserDao {
 
 	User checkuname(String uname);
 
+	Integer register(User user);
+
 }
