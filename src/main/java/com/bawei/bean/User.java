@@ -7,6 +7,7 @@ package com.bawei.bean;
  */
 public class User {
 
+	private Integer didid;
 	private Integer uid;  //primary key auto_increment,
 	private String uname; //varchar(50) unique,
 	private String pwd; //varchar(50),
