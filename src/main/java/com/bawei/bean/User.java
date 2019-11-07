@@ -17,6 +17,9 @@ public class User {
 	private String created; //date,
 	private String updated; //date,
 	private String picture; //varchar(255)
+	
+	private String aaa;
+	
 	public User(Integer uid, String uname, String pwd, String nickname, String birthday, Integer gender, Integer locked,
 			String created, String updated, String picture) {
 		super();
