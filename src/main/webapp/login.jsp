@@ -14,6 +14,7 @@
 </head>
 <body>
 	<form action="">
+		<span></span>
 		用户名:<input type="text" name="uname" onblur="look()"><br><br>
 		密&nbsp;&nbsp;&nbsp;码:<input type="password" name="pwd"><br><br>
 		<input type="button" value="登录" onclick="login()">
@@ -31,7 +32,7 @@
 				
 				if(u!=null){
 					str="<img alt='xxx' width='100px;' height='50px;'><br><br>"
-					$("form").before(str);
+					$("span").html(str);
 					$("[alt='xxx']").attr("src","<%=path%>/lockPicture?path="+u.picture);
 				}
 			},
